@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+div.cluster img {
+    width: 200px;
+}
+
+div.cluster img.logo {
+    margin-bottom: 40px;
+}
+
+div.cluster {
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("../img/digitalworld.jpg") no-repeat;
+    background-size: cover;
+}
+
+/* div.cluster a {
+    padding: 10px;
+    border: 1px solid rgb(42, 181, 42);
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(42, 181, 42);
+    text-decoration: none;
+    transition: 0.3s;
+} */
+
+/* div.cluster a:hover {
+    background-color: rgb(48, 142, 48);
+    box-shadow: 2px 2px 6px #888888;
+} */
+/* 
+div.chartDonat{
+    width: 400px;
+} */
+
+table {
+    font-size: 14px;
+}
