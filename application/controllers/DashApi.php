@@ -31,7 +31,7 @@ class Dashapi extends CI_Controller
     public function kawasan()
     {
         $data['data'] = $this->db->query("SELECT kawasan, COUNT(kawasan) AS total FROM qr GROUP BY kawasan")->result();
-
+        'test';
         echo json_encode($data);
     }
 }
