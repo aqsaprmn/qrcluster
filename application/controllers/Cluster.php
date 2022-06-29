@@ -33,10 +33,10 @@ class Cluster extends CI_Controller
     }
     public function MEDITERANIA_GOLF_HILL()
     {
-        $user_ip = $this->get_client_ip;
         $data['title'] = 'MEDITERANIA GOLF HILL';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -45,19 +45,8 @@ class Cluster extends CI_Controller
     {
         $data['title'] = 'BESAKIH';
         $user_ip = $this->get_client_ip();
-        $data['sql'] = [
-            'kawasan' => $data['title'],
-            'ip' => $user_ip,
-            'waktu_scan' => date("Y-m-d H:i:s"),
-            'tanggal' => date("Y-m-d"),
-            'day' => date('j'),
-            'month' => date('n'),
-            'year' => date('Y'),
-            'jam_detail' => date('H'),
-            'jam' => date('H')
-        ];
 
-        $this->M_user->inserDataCluster('qr', $data['sql']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
 
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
@@ -67,21 +56,8 @@ class Cluster extends CI_Controller
     {
         $data['title'] = 'PARAHYANGAN GOLF';
         $user_ip = $this->get_client_ip();
-        $data['sql'] = [
-            'kawasan' => $data['title'],
-            'ip' => $user_ip,
-            'waktu_scan' => date("Y-m-d H:i:s"),
-            'tanggal' => date("Y-m-d"),
-            'day' => date('j'),
-            'month' => date('n'),
-            'year' => date('Y'),
-            'jam_detail' => date('H'),
-            'jam' => date('H')
-        ];
 
-        $this->M_user->inserDataCluster('qr', $data['sql']);
-
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -90,19 +66,8 @@ class Cluster extends CI_Controller
     {
         $data['title'] = 'UDAYANA';
         $user_ip = $this->get_client_ip();
-        $data['sql'] = [
-            'kawasan' => $data['title'],
-            'ip' => $user_ip,
-            'waktu_scan' => date("Y-m-d H:i:s"),
-            'tanggal' => date("Y-m-d"),
-            'day' => date('j'),
-            'month' => date('n'),
-            'year' => date('Y'),
-            'jam_detail' => date('H'),
-            'jam' => date('H')
-        ];
 
-        $this->M_user->inserDataCluster('qr', $data['sql']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
 
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
@@ -111,8 +76,9 @@ class Cluster extends CI_Controller
     public function LEGIAN()
     {
         $data['title'] = 'LEGIAN';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -120,8 +86,9 @@ class Cluster extends CI_Controller
     public function IMPERIAL_GOLF_ESTATE()
     {
         $data['title'] = 'IMPERIAL GOLF ESTATE';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -129,8 +96,9 @@ class Cluster extends CI_Controller
     public function TAMPAK_SIRING()
     {
         $data['title'] = 'TAMPAK SIRING';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -138,8 +106,9 @@ class Cluster extends CI_Controller
     public function LAVANOISE_VILLAGE()
     {
         $data['title'] = 'LAVANOISE VILLAGE';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -147,17 +116,19 @@ class Cluster extends CI_Controller
     public function MEDITERANIA_GOLF_2()
     {
         $data['title'] = 'MEDITERANIA GOLF 2';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
     }
     public function RUKO_PLAZA_NIAGA_1()
     {
-        $data['title'] = 'RUKO PLAZA NIAGA_1';
+        $data['title'] = 'RUKO PLAZA NIAGA 1';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -165,8 +136,9 @@ class Cluster extends CI_Controller
     public function MEDITERANIA_GOLF_1()
     {
         $data['title'] = 'MEDITERANIA GOLF 1';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -174,8 +146,9 @@ class Cluster extends CI_Controller
     public function VENESIA()
     {
         $data['title'] = 'VENESIA';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -183,8 +156,9 @@ class Cluster extends CI_Controller
     public function PASADENA()
     {
         $data['title'] = 'PASADENA';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -192,8 +166,9 @@ class Cluster extends CI_Controller
     public function MOUNTAIN_VIEW()
     {
         $data['title'] = 'MOUNTAIN VIEW';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -201,8 +176,9 @@ class Cluster extends CI_Controller
     public function SAKURA()
     {
         $data['title'] = 'SAKURA';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -210,8 +186,9 @@ class Cluster extends CI_Controller
     public function PASAR_BERSIH()
     {
         $data['title'] = 'PASAR BERSIH';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -219,8 +196,9 @@ class Cluster extends CI_Controller
     public function BUKIT_GOLF_HIJAU()
     {
         $data['title'] = 'BUKIT GOLF HIJAU';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -228,8 +206,9 @@ class Cluster extends CI_Controller
     public function PUNCAK_MAS()
     {
         $data['title'] = 'PUNCAK MAS';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -237,8 +216,9 @@ class Cluster extends CI_Controller
     public function EMERALD_GOLF()
     {
         $data['title'] = 'EMERALD GOLF';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -246,8 +226,9 @@ class Cluster extends CI_Controller
     public function VICTORIA()
     {
         $data['title'] = 'VICTORIA';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -255,8 +236,9 @@ class Cluster extends CI_Controller
     public function CASABLANCA()
     {
         $data['title'] = 'CASABLANCA';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -264,8 +246,9 @@ class Cluster extends CI_Controller
     public function ANDALUSIA()
     {
         $data['title'] = 'ANDALUSIA';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -273,8 +256,9 @@ class Cluster extends CI_Controller
     public function SIERRA_MADRE()
     {
         $data['title'] = 'SIERRA MADRE';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -282,8 +266,9 @@ class Cluster extends CI_Controller
     public function ENGLAND_PARK()
     {
         $data['title'] = 'ENGLAND PARK';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -291,8 +276,9 @@ class Cluster extends CI_Controller
     public function YUNANI()
     {
         $data['title'] = 'YUNANI';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);
@@ -300,8 +286,9 @@ class Cluster extends CI_Controller
     public function HILL_TOP()
     {
         $data['title'] = 'HILL TOP';
+        $user_ip = $this->get_client_ip();
 
-        $this->M_user->inserDataCluster('qr', $data['title']);
+        $this->M_user->inserDataCluster('qr', $data['title'], $user_ip);
         $this->load->view('template/header', $data);
         $this->load->view('cluster/cluster', $data);
         $this->load->view('template/footer', $data);

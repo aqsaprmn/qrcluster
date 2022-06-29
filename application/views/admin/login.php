@@ -36,7 +36,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="mb-4"><?= $this->session->flashdata('message'); ?></div>
             <form class="border border-gray shadow-lg rounded p-2" action="<?= base_url() ?>login/go" method="POST">
                 <div class="mb-3">
-                    <input type="text" required class="form-control p-3 rounded" name="username" placeholder="Username">
+                    <input type="text" required class="form-control p-3 rounded" name="username" placeholder="Username" autocomplete="off">
                 </div>
                 <div class="mb-2">
                     <input type="password" required class="form-control p-3 rounded" name="password" placeholder="Password">

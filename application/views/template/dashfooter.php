@@ -125,19 +125,19 @@
         const stateDonat = document.querySelector('.stateDonat');
         const tableDonat = stateDonat.querySelector('table');
 
-        let trDonat = ``;
+        // let trDonat = ``;
         let colorDonat = getColorLabel(data.length);
 
-        data.forEach((val, index, arr) => {
-            trDonat += `<tr>
-                        <td style="padding:10px"><span style="position:relative; display: block; width:20px; height: 20px; background-color:${colorDonat[index]}; border:1px solid black;"><span></td>
-                        <td>${label[index]} </td>
-                        <td colspan="3" class="text-center"> = </td>
-                        <td class="text-center"><b>${data[index]}</b></td>
-                </tr>`;
-        });
+        // data.forEach((val, index, arr) => {
+        //     trDonat += `<tr>
+        //                 <td style="padding:10px"><span style="position:relative; display: block; width:20px; height: 20px; background-color:${colorDonat[index]}; border:1px solid black;"><span></td>
+        //                 <td>${label[index]} </td>
+        //                 <td colspan="3" class="text-center"> = </td>
+        //                 <td class="text-center"><b>${data[index]}</b></td>
+        //         </tr>`;
+        // });
 
-        tableDonat.innerHTML = trDonat;
+        // tableDonat.innerHTML = trDonat;
 
         const myDonatChart = new Chart(
             document.getElementById('donat'), {
@@ -347,6 +347,61 @@
                 },
             }
         );
+
+        $(document).ready(function() {
+            const tableAll = $("#table").DataTable();
+
+            const tableDonat = $('#tbldonat').DataTable({
+                ajax: {
+                    url: '<?= base_url('dashapi/kawasan') ?>'
+                },
+                columnDefs: [{
+                    searchable: false,
+                    orderable: false,
+                    targets: 0,
+                    className: 'dt-body-center'
+                }, {
+                    searchable: false,
+                    orderable: false,
+                    targets: 1,
+                }, {
+                    targets: [1, 3],
+                    className: 'dt-body-center'
+                }],
+                order: [
+                    [1, 'asc']
+                ],
+                columns: [{
+                    data: "kawasan"
+                }, {
+                    data: "total"
+                }, {
+                    data: "kawasan"
+                }, {
+                    data: "total"
+                }]
+            });
+
+            tableDonat.on('order.dt search.dt', function() {
+                let i = 1;
+                let k = 0;
+
+                tableDonat.cells(null, 0, {
+                    search: 'applied',
+                    order: 'applied'
+                }).every(function(cell) {
+                    this.data(i++);
+                });
+
+                tableDonat.cells(null, 1, {
+                    search: 'applied',
+                    order: 'applied'
+                }).every(function(cell) {
+                    this.data(`<span style="position:relative; display: block; width:20px; height: 20px; background-color:${colorDonat[k++]}; border:1px solid black;"><span>`);
+                });
+
+            }).draw();
+        });
     })
 
     xhr.open('POST', '<?= base_url() ?>' + 'dashapi/tanggal');
@@ -354,8 +409,10 @@
     xhr.send("month=" + month.value + "&day=" + day.value);
 
     $(document).ready(function() {
-        $("#table").DataTable();
+        const tableAll = $("#table").DataTable();
     });
+
+
 
     function updateChart(chart, mydata) {
         chart.data.datasets.forEach((dataset) => {
