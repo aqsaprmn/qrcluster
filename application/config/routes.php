@@ -51,6 +51,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 $route['default_controller'] = 'login';
 $route['dashapi'] = 'dashapi';
+$route['login'] = 'login';
 $route['dashboard'] = 'dashboard';
 $route['cluster'] = 'cluster';
 $route['404_override'] = '';

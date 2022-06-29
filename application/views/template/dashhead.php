@@ -16,6 +16,15 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 
     <title><?= $title ?> - Akses Prima Indonesia</title>
+
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("<?= base_url() ?>asset/img/digitalworld.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
 </head>
 
 <body>

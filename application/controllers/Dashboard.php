@@ -10,12 +10,22 @@ class Dashboard extends CI_Controller
     }
     public function index()
     {
-        $data['title'] = 'Dashboard';
+        if ($this->session->userdata('username')) {
+            if ($this->session->userdata('token')) {
+                $data['title'] = 'Dashboard';
 
-        $data['visitor'] = $this->M_user->getDataAll('qr');
+                $data['visitor'] = $this->M_user->getDataAll('qr');
 
-        $this->load->view('template/dashhead', $data);
-        $this->load->view('admin/dashboard', $data);
-        $this->load->view('template/dashfooter');
+                $this->load->view('template/dashhead', $data);
+                $this->load->view('admin/dashboard', $data);
+                $this->load->view('template/dashfooter');
+            }
+        } else {
+            $this->session->set_flashdata('message',  '
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Dilarang Masuk Ilegal
+                </div>');
+            redirect('login');
+        }
     }
 }

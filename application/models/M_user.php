@@ -15,4 +15,8 @@ class M_user extends CI_Model
     {
         $this->db->insert($table, $data);
     }
+    public function getRow($table, $where)
+    {
+        return $this->db->get_where($table, $where)->row_array();
+    }
 }

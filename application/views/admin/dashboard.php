@@ -2,20 +2,27 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 
-<header class="text-center my-5">
+<header class="text-center text-white my-5">
     <div class="row m-0">
-        <div class="col-sm-1 ps-5">
+        <div class="col-sm-2 px-5">
             <img style="width:200px ;" src="<?= base_url() ?>asset/img/logoapi.png" class="mb-4" alt="">
         </div>
-        <div class="col-sm-11">
-            <h1>Dashboard</h1>
+        <div class="col-sm-10 px-5">
+            <div class="row">
+                <div class="col-lg-6 text-end">
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="col-lg-6 text-end">
+                    <a href="<?= base_url() ?>login/logout" class="btn btn-danger">Logout</a>
+                </div>
+            </div>
         </div>
     </div>
 </header>
 <section class="">
     <div class="row justify-content-around px-4 m-0">
         <div class="col-lg-6 px-4 mb-5">
-            <div class="p-4 shadow-lg border border-gray rounded">
+            <div class="p-4 shadow-lg bg-white border border-gray rounded">
                 <div class="text-center mb-4">
                     <h5>Total Akses QR Per Kawasan</h5>
                 </div>
@@ -32,7 +39,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </div>
         </div>
         <div class="col-lg-6 px-4">
-            <div class="p-4 shadow-lg border border-gray rounded">
+            <div class="p-4 shadow-lg bg-white border border-gray rounded">
                 <div class="text-center mb-4">
                     <h5>Total Akses QR Per Jam</h5>
                 </div>
@@ -47,7 +54,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </div>
     <div class="row justify-content-around p-4 m-0">
         <div class="col-lg-12 p-4">
-            <div class="p-4 shadow-lg border border-gray">
+            <div class="p-4 shadow-lg bg-white border border-gray">
                 <div class="text-center mb-4">
                     <h5>Total Akses QR Per Tanggal</h5>
                 </div>
@@ -61,7 +68,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         </div>
     </div>
     <div class="row px-5 mx-0 pb-5">
-        <div class="col-lg-12 overflow-auto p-5 shadow-lg border border-gray rounded">
+        <div class="col-lg-12 overflow-auto bg-white p-5 shadow-lg border border-gray rounded">
             <table id="table" class="cell-border row-border hover compact stripe">
                 <thead>
                     <tr>
