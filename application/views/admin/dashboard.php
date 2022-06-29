@@ -67,6 +67,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <tr>
                         <th class="text-center">No.</th>
                         <th class="text-center">Kawasan</th>
+                        <th class="text-center">Use IP</th>
                         <th class="text-center">Tanggal & Waktu</th>
                     </tr>
                 </thead>
@@ -76,6 +77,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <tr>
                             <td class="text-center p-2"><?= $i; ?></td>
                             <td><?= $d['kawasan'] ?></td>
+                            <td class="text-center"><?= $d['ip'] ?></td>
                             <td class="text-center"><?= $d['waktu_scan'] ?></td>
                         </tr>
                         <?php $i++; ?>
