@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => 'billing',
 	'username' => 'root',
-	'password' => '',
+	'password' => 'S@l3strack',
 	'database' => 'barcode',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
