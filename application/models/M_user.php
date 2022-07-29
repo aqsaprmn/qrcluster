@@ -11,18 +11,19 @@ class M_user extends CI_Model
     {
         return $this->db->get_where($table, $where)->result_array();
     }
-    public function inserDataCluster($table, $title, $user_ip)
+    public function inserDataCluster($table, $title, $user_ip, $type = "S1")
     {
         $data = [
             'kawasan' => $title,
+            'type' => $type,
             'ip' => $user_ip,
             'waktu_scan' => date("Y-m-d H:i:s"),
             'tanggal' => date("Y-m-d"),
             'day' => date('j'),
             'month' => date('n'),
             'year' => date('Y'),
-            'jam_detail' => date('H'),
-            'jam' => date('H')
+            'jam_detail' => date('H:i:s'),
+            'time' => date('H:i')
         ];
 
         $this->db->insert($table, $data);
