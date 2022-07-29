@@ -54,5 +54,6 @@ $route['dashapi'] = 'dashapi';
 $route['login'] = 'login';
 $route['dashboard'] = 'dashboard';
 $route['cluster'] = 'cluster';
+$route['clusterv2'] = 'clusterv2';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
