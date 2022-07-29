@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Cluster_S2 extends CI_Controller
+class ClusterV2 extends CI_Controller
 {
     public function __construct()
     {
