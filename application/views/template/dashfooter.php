@@ -57,6 +57,8 @@
                     totalDay.push(val['total']);
                 });
 
+                console.log(totalDay, labelsDay);
+
                 updateChartDL(myLineChart, labelsDay, totalDay);
             })
         })

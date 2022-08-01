@@ -23,7 +23,7 @@ class Dashapi extends CI_Controller
 
         $data['kawasan'] = $this->db->query("SELECT kawasan, COUNT(kawasan) AS total FROM qr GROUP BY kawasan")->result_array();
 
-        $data['jam'] = $this->db->query("SELECT tanggal, time, COUNT(time) AS total FROM qr WHERE tanggal = '$day' GROUP BY time")->result_array();
+        $data['jam'] = $this->db->query("SELECT tanggal, jam, time, COUNT(jam) AS total FROM qr WHERE tanggal = '$day' GROUP BY jam")->result_array();
 
         echo json_encode($data);
     }

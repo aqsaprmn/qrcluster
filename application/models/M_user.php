@@ -22,6 +22,7 @@ class M_user extends CI_Model
             'day' => date('j'),
             'month' => date('n'),
             'year' => date('Y'),
+            'jam' => date('H'),
             'jam_detail' => date('H:i:s'),
             'time' => date('H:i')
         ];
